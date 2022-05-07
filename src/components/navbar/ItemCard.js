@@ -1,14 +1,16 @@
 import { ImCross } from "react-icons/im";
 
+import classes from './ItemCard.module.scss';
+
 const ItemCard = props => {
     return (
-        <section>
+        <section className={classes['item-card']}>
             <img
                 src={props.image}
                 alt={props.name}
             />
 
-            <div>
+            <div className={classes.description}>
                 <div>
                     <p>{props.name}</p>
                     <p>{props.brand}</p>

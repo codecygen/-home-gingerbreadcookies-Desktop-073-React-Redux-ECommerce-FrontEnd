@@ -1,7 +1,7 @@
 @import "../styles/Variables.scss";
 
 .navbar {
-    height: inherit;
+    height: 80px;
     background-color: $white;
     padding: 0 $paddingMain;
 
@@ -10,8 +10,11 @@
     right: 0;
     left: 0;
 
+    border: solid $black;
+    border-width: 3px 0;
+
     ul {
-        height: 80px;
+        height: inherit;
         display: flex;
         flex-direction: row;
         align-items: center;

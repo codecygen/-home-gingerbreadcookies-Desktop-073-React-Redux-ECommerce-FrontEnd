@@ -4,7 +4,7 @@ import classes from './HomePage.module.scss';
 const HomePage = () => {
   return (
     <section className={classes.home}>
-      <img src={HomeImage} />
+      <img src={HomeImage} alt="Home Page Overlay" />
 
       <div>
         <h1>Patio Furniture</h1>
