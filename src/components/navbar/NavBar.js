@@ -1,14 +1,15 @@
 import Cart from "./Cart";
+import classes from './NavBar.module.scss';
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav className={classes.navbar}>
       <ul>
-        <li>Fülhaus Shop</li>
+        <li><h1>Fülhaus Shop</h1></li>
         <li><button>CART</button></li>
       </ul>
 
-      <Cart />
+      {/* <Cart /> */}
     </nav>
   );
 };

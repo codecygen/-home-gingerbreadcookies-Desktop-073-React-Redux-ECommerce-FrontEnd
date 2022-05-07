@@ -1,0 +1,30 @@
+@import "../styles/Variables.scss";
+
+.navbar {
+    height: inherit;
+    background-color: $white;
+    padding: 0 $paddingMain;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    ul {
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+
+            button {
+                @include buttonStyle(100px);
+            }
+        }
+    }
+}

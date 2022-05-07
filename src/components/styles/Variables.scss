@@ -1,0 +1,24 @@
+// Colors
+$canvas: #f7efe7;
+$white: #fff;
+$blackOpaque: #000000cc;
+$black: #000;
+$green: #003941;
+
+// Fonts
+// $titleFont: Arial, Helvetica, sans-serif;
+
+// Structuring
+$paddingMain: 10%;
+
+// Templates
+@mixin buttonStyle($width) {
+    width: $width;
+    height: 40px;
+    background-color: $black;
+    border: none;
+    border-radius: 2px;
+    color: $white;
+    font-size: 25px;
+    cursor: pointer;
+}

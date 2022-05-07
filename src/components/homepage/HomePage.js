@@ -1,8 +1,9 @@
 import HomeImage from '../../assets/HomeImage.jpg';
+import classes from './HomePage.module.scss';
 
 const HomePage = () => {
   return (
-    <section>
+    <section className={classes.home}>
       <img src={HomeImage} />
 
       <div>
