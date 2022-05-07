@@ -1,0 +1,1 @@
+This is a React and Redux app for a simple e-commerce website.
