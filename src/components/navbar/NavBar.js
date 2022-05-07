@@ -8,7 +8,7 @@ const NavBar = () => {
           <li><h1>Fülhaus Shop</h1></li>
           <li><button>CART</button></li>
         </ul>
-        <Cart />
+        {/* <Cart /> */}
       </nav>
   );
 };
