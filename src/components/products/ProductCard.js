@@ -12,7 +12,7 @@ const ProductCard = props => {
 
             <div className={classes.info}>
                 <div>
-                    <p>{props.name}</p>
+                    <h3>{props.name}</h3>
                     <p>{props.brand}</p>
                 </div>
 
