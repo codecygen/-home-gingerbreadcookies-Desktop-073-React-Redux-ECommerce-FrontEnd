@@ -1,11 +1,16 @@
+import { useDispatch } from "react-redux";
+
 import { ImCross } from "react-icons/im";
+
+import { cartActions } from "../../store/cart-slice";
 
 import classes from './ItemCard.module.scss';
 
 const ItemCard = props => {
-    const addItemHandler = () => {
-        console.log(props);
-        // dispatch(cartActions.addItemToCart());
+    const dispatch = useDispatch();
+
+    const deleteItemHandler = () => {
+        dispatch(cartActions.removeItemFromCart(props.id));
     }
 
     return (
@@ -24,7 +29,7 @@ const ItemCard = props => {
                 <p>${props.price}</p>
             </div>
 
-            <button onClick={addItemHandler}><ImCross /></button>
+            <button onClick={deleteItemHandler}><ImCross /></button>
         </section>
     );
 };

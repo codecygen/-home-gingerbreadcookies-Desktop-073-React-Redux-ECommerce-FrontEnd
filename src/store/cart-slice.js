@@ -18,6 +18,16 @@ const cartSlice = createSlice({
                 brand: newItem.brand,
             });
 
+            cartSlice.caseReducers.calculatePrice(state);
+        },
+
+        removeItemFromCart(state, action) {
+            const id = action.payload;
+            state.items = state.items.filter(item => item.id !== id);
+            cartSlice.caseReducers.calculatePrice(state);
+        },
+
+        calculatePrice(state) {
             let calculatedTotalPrice = 0
 
             for (const item of state.items) {
@@ -25,23 +35,6 @@ const cartSlice = createSlice({
             }
 
             state.totalPrice = calculatedTotalPrice;
-
-            console.log(current(state.items));
-            console.log(state.totalPrice);
-        },
-
-        removeItemFromCart(state, action) {
-            const id = action.payload;
-            const existingItem = state.items.find(item => item.id === id);
-            state.totalQuantity--;
-            state.changed = true;
-
-            if (existingItem.quantity === 1) {
-                state.items = state.items.filter(item => item.id !== id);
-            } else {
-                existingItem.quantity--;
-                existingItem.totalPrice = existingItem.totalPrice - existingItem.price;
-            }
         }
     }
 });

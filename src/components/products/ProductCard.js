@@ -12,7 +12,7 @@ const ProductCard = props => {
 
     const addItemHandler = () => {
         const newItemRequest = {
-            id: props.id,
+            id: props.id + Math.floor(Math.random() * 1000000).toString(),
             image: props.image,
             name: props.name,
             brand: props.brand,

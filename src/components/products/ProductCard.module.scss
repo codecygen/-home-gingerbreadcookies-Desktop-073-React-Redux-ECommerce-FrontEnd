@@ -56,6 +56,6 @@
     }
 }
 
-.card:hover .info {
+.card:hover .info, .card:focus .info {
     visibility: visible;
 }

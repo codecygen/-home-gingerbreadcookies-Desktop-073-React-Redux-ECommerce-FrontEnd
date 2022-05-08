@@ -1,3 +1,5 @@
+import { useSelector } from 'react-redux';
+
 import ItemCard from './ItemCard';
 
 import classes from './Cart.module.scss';
@@ -6,47 +8,8 @@ import Stool from '../../assets/Stool.png';
 
 const Cart = (props) => {
 
-    const cartItemList = [
-        {
-            id: 'a0',
-            image: Stool,
-            name: 'Stool',
-            brand: 'Brand',
-            price: 900
-        },
-
-        {
-            id: 'a1',
-            image: Stool,
-            name: 'Stool 2',
-            brand: 'Brand 2',
-            price: 1000
-        },
-
-        {
-            id: 'a2',
-            image: Stool,
-            name: 'Stool 2',
-            brand: 'Brand 2',
-            price: 1000
-        },
-
-        {
-            id: 'a3',
-            image: Stool,
-            name: 'Stool 2',
-            brand: 'Brand 2',
-            price: 1000
-        },
-        
-        {
-            id: 'a4',
-            image: Stool,
-            name: 'Stool 2',
-            brand: 'Brand 2',
-            price: 1000
-        },
-    ];
+    const cartItemList = useSelector(state => state.cart.items);
+    const subTotalPrice = useSelector(state => state.cart.totalPrice);
 
     const cartItems = cartItemList.map(item => (
         <ItemCard
@@ -72,7 +35,7 @@ const Cart = (props) => {
             <div className={classes['cart-bottom']}>
                 <div>
                     <h2>Total:</h2>
-                    <h2>$1800</h2>
+                    <h2>${subTotalPrice}</h2>
                 </div>
                 <button>CHECKOUT</button>
             </div>
