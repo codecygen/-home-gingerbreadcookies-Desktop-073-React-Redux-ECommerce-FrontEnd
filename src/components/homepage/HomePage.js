@@ -2,12 +2,12 @@ import classes from './HomePage.module.scss';
 
 const HomePage = () => {
   return (
-    <section className={classes.home}>
+    <header className={classes.home}>
       <div>
         <h1>Patio Furniture</h1>
-        <button>SHOP</button>
+        <a href='#products-section'>SHOP</a>
       </div>
-    </section>
+    </header>
     
   );
 };

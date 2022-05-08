@@ -1,5 +1,7 @@
 import ProductCard from './ProductCard';
 
+import classes from './Products.module.scss';
+
 import Stool from '../../assets/Stool.png';
 
 const Products = () => {
@@ -20,6 +22,22 @@ const Products = () => {
             brand: 'Brand 2',
             price: 1000
         },
+
+        {
+            id: 'a2',
+            image: Stool,
+            name: 'Stool 3',
+            brand: 'Brand 3',
+            price: 1000
+        },
+
+        {
+            id: 'a3',
+            image: Stool,
+            name: 'Stool 4',
+            brand: 'Brand 4',
+            price: 1000
+        },
     ];
 
     const cartItems = cartItemList.map(item => (
@@ -34,7 +52,7 @@ const Products = () => {
     ));
 
     return (
-        <section>
+        <section className={classes.products} id='products-section'>
             {cartItems}
         </section>
     );

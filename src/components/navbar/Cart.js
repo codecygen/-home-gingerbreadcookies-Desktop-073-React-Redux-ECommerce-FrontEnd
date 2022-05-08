@@ -4,7 +4,7 @@ import classes from './Cart.module.scss';
 
 import Stool from '../../assets/Stool.png';
 
-const Cart = () => {
+const Cart = (props) => {
 
     const cartItemList = [
         {
@@ -24,7 +24,7 @@ const Cart = () => {
         },
 
         {
-            id: 'a1',
+            id: 'a2',
             image: Stool,
             name: 'Stool 2',
             brand: 'Brand 2',
@@ -32,7 +32,7 @@ const Cart = () => {
         },
 
         {
-            id: 'a1',
+            id: 'a3',
             image: Stool,
             name: 'Stool 2',
             brand: 'Brand 2',
@@ -40,7 +40,7 @@ const Cart = () => {
         },
         
         {
-            id: 'a1',
+            id: 'a4',
             image: Stool,
             name: 'Stool 2',
             brand: 'Brand 2',
@@ -59,8 +59,12 @@ const Cart = () => {
         />
     ));
 
+    const cartClasses = props.cartVisible ? 
+        `${classes.cart} ${classes['cart-active']}` : classes.cart
+    ;
+
     return (
-        <div className={classes.cart}>
+        <div className={cartClasses}>
             <div className={classes['cart-top']}>
                 {cartItems}
             </div>

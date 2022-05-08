@@ -2,7 +2,7 @@
 
 .home {
     height: 100vh;
-    padding: 0 $paddingMain;
+    margin: 0 $paddingMain;
     position: relative;
 
     background-image: url('~/src/assets/HomeImage.jpg');
@@ -31,7 +31,7 @@
             color: $white;
         }
 
-        button {
+        a {
             @include buttonStyle(200px);
             z-index: 10;
         }

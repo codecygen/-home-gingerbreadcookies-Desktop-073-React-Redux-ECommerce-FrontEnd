@@ -16,7 +16,7 @@ const ItemCard = props => {
                     <p>{props.brand}</p>
                 </div>
 
-                <p>{props.price}</p>
+                <p>${props.price}</p>
             </div>
 
             <button><ImCross /></button>

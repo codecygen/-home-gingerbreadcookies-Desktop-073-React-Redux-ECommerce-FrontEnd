@@ -3,16 +3,24 @@
 .cart {
     width: 500px;
     position: fixed;
-    top: 86px;
+    top: 0;
     right: 0;
-    bottom: 0;
     background-color: $white;
     padding: 30px;
     box-sizing: border-box;
+    z-index: 10;
+
+    height: 0;
+    visibility: hidden;
+    -webkit-transition: height 0.2s, visibility 0.1s ease-in-out;
+    -moz-transition: height 0.2s, visibility 0.1s ease-in-out;
+    -o-transition: height 0.2s, visibility 0.1s ease-in-out;
+    transition: height 0.2s, visibility 0.1s ease-in-out;
 }
 
 .cart-top {
-    height: 80%;
+    height: calc(80% - $menuHeight);
+    margin-top: $menuHeight;
     overflow-y: scroll;
     scrollbar-width: thin;
 
@@ -41,4 +49,9 @@
     button {
         @include buttonStyle(100%);
     }
+}
+
+.cart-active {
+    height: 100vh;
+    visibility: visible;
 }

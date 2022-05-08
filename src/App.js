@@ -4,11 +4,11 @@ import Products from './components/products/Products';
 
 const App = () => {
   return (
-    <>
+    <main>
       <NavBar />
       <HomePage />
       <Products />
-    </>
+    </main>
   );
 };
 

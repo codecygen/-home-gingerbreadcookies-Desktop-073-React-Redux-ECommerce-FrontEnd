@@ -1,0 +1,17 @@
+@import "../styles/Variables.scss";
+
+.products {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10%;
+    padding: 0 $paddingMain;
+    margin: 40px 0;
+
+    @media (min-width: 710px) {
+        height: 100vh;
+        justify-content: space-between;
+    }
+}
