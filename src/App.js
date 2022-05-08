@@ -45,8 +45,6 @@ const App = () => {
     fetchProductsHandler();
   }, [fetchProductsHandler]);
 
-  console.log(productsData);
-
   return (
     <main>
       <NavBar />

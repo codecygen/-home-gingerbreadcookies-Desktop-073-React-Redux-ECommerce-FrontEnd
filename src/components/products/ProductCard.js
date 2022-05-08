@@ -1,8 +1,27 @@
+import { useDispatch } from "react-redux";
+
 import { AiOutlinePlus } from "react-icons/ai";
+
+import { cartActions } from "../../store/cart-slice";
 
 import classes from './ProductCard.module.scss';
 
 const ProductCard = props => {
+
+    const dispatch = useDispatch();
+
+    const addItemHandler = () => {
+        const newItemRequest = {
+            id: props.id,
+            image: props.image,
+            name: props.name,
+            brand: props.brand,
+            price: props.price
+        };
+        
+        dispatch(cartActions.addItemToCart(newItemRequest));
+    }
+
     return (
         <div className={classes.card}>
             <img
@@ -17,7 +36,7 @@ const ProductCard = props => {
                 </div>
 
                 <div>
-                    <button><AiOutlinePlus /> Add to Cart</button>
+                    <button onClick={addItemHandler}><AiOutlinePlus /> Add to Cart</button>
                     <p>${props.price}</p>
                 </div>
             </div>

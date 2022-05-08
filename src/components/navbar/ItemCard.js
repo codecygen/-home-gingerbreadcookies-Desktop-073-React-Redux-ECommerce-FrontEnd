@@ -3,6 +3,11 @@ import { ImCross } from "react-icons/im";
 import classes from './ItemCard.module.scss';
 
 const ItemCard = props => {
+    const addItemHandler = () => {
+        console.log(props);
+        // dispatch(cartActions.addItemToCart());
+    }
+
     return (
         <section className={classes['item-card']}>
             <img
@@ -19,7 +24,7 @@ const ItemCard = props => {
                 <p>${props.price}</p>
             </div>
 
-            <button><ImCross /></button>
+            <button onClick={addItemHandler}><ImCross /></button>
         </section>
     );
 };
