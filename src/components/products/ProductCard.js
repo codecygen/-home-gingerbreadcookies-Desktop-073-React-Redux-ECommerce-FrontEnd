@@ -10,7 +10,7 @@ const ProductCard = props => {
                 alt={props.name}
             />
 
-            <div>
+            <div className={classes.info}>
                 <div>
                     <p>{props.name}</p>
                     <p>{props.brand}</p>
