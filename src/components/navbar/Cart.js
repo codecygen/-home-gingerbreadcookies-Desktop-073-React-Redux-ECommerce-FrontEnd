@@ -4,8 +4,6 @@ import ItemCard from './ItemCard';
 
 import classes from './Cart.module.scss';
 
-import Stool from '../../assets/Stool.png';
-
 const Cart = (props) => {
 
     const cartItemList = useSelector(state => state.cart.items);
